@@ -1,4 +1,5 @@
-﻿using Project.Scripts.Model;
+﻿using System;
+using Project.Scripts.Model;
 using Project.Scripts.Service;
 using Project.Scripts.View;
 using UnityEngine;
@@ -19,23 +20,37 @@ namespace Project.Scripts.Controller
 
         public async void OnClick_Feedback()
         {
-            if (string.IsNullOrEmpty(_view.FeedbackText))
-                return;
-            
-            FeedbackData feedbackData = new FeedbackData(_view.FeedbackText);
-            
-            _view.ShowLoading();
-
-            bool isSuccess = await _feedbackService.SubmitFeedback(feedbackData);
-
-            if (isSuccess)
+            try
             {
-                _view.ShowSuccess();
+                if (string.IsNullOrEmpty(_view.FeedbackText))
+                    return;
+            
+                FeedbackData feedbackData = new FeedbackData(_view.FeedbackText);
+            
+                _view.ShowLoading();
+
+                bool isSuccess = await _feedbackService.SubmitFeedback(feedbackData);
+
+                if (isSuccess)
+                {
+                    _view.ResetView();
+                    _view.ShowSuccess();
+                }
+                else
+                {
+                    _view.ShowError();
+                }
             }
-            else
+            catch (Exception e)
             {
+                Debug.LogError("Error. Async crash!!!");
                 _view.ShowError();
             }
+        }
+
+        public void OnClick_Back()
+        {
+            _view.ResetView();
         }
     }
 }
