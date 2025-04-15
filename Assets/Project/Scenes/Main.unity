@@ -1848,9 +1848,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1732358352}
-        m_TargetAssemblyTypeName: Project.Scripts.FeedbackView, Assembly-CSharp
-        m_MethodName: ResetView
+      - m_Target: {fileID: 2104497101}
+        m_TargetAssemblyTypeName: Project.Scripts.Controller.FeedbackController,
+          Assembly-CSharp
+        m_MethodName: OnClick_Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2213,7 +2214,6 @@ MonoBehaviour:
   _feedbackInputField: {fileID: 798318949}
   _loadingPanel: {fileID: 1176620291}
   _successPanel: {fileID: 1979665508}
-  _errorText: {fileID: 1280902238}
   _errorPanel: {fileID: 577894285}
 --- !u!1 &1859768505
 GameObject:
@@ -2298,9 +2298,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1732358352}
-        m_TargetAssemblyTypeName: Project.Scripts.FeedbackView, Assembly-CSharp
-        m_MethodName: ResetView
+      - m_Target: {fileID: 2104497101}
+        m_TargetAssemblyTypeName: Project.Scripts.Controller.FeedbackController,
+          Assembly-CSharp
+        m_MethodName: OnClick_Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2640,7 +2641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3545bca71fe84615866ebc02f4234eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _view: {fileID: 1732358352}
 --- !u!1 &2128271837
 GameObject:
   m_ObjectHideFlags: 0
