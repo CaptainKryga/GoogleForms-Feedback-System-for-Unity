@@ -14,11 +14,9 @@ namespace Project.Scripts.Service
             WWWForm form = new WWWForm();
             form.AddField("entry1", feedbackData.Message);
 
-            using (UnityWebRequest www = UnityWebRequest.Post(FormUrl, form))
-            {
-                await www.SendWebRequest().ToUniTask();
-                return www.result == UnityWebRequest.Result.Success;
-            }
+            using UnityWebRequest www = UnityWebRequest.Post(FormUrl, form);
+            await www.SendWebRequest().ToUniTask();
+            return www.result == UnityWebRequest.Result.Success;
         }
     }
 }
