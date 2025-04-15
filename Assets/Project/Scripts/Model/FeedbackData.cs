@@ -5,7 +5,7 @@ namespace Project.Scripts.Model
     [Serializable]
     public class FeedbackData
     {
-        public string Message;
+        public string Message { get; private set; }
 
         public FeedbackData(string message)
         {
