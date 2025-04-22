@@ -6,6 +6,8 @@
 
 A simple yet powerful solution for collecting user feedback in Unity games via Google Forms 📊
 
+[![YouTube](https://img.shields.io/badge/-YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UC2z8n9O2iOhsUyOvoddyaiw/) [Watch the video on this repository here](https://youtu.be/lvG7cqetdJU)
+
 ## ✨ Features
 - 🚀 Easy integration into any Unity project
 - 📤 Submit text data and numerical ratings
